@@ -10,9 +10,7 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.Post = void 0;
-less;
-Copy;
-code;
+require("reflect-metadata");
 const core_1 = require("@mikro-orm/core");
 const type_graphql_1 = require("type-graphql");
 let Post = class Post {
@@ -27,7 +25,7 @@ __decorate([
     __metadata("design:type", Number)
 ], Post.prototype, "id", void 0);
 __decorate([
-    (0, type_graphql_1.Field)(),
+    (0, type_graphql_1.Field)(() => String),
     (0, core_1.Property)(),
     __metadata("design:type", String)
 ], Post.prototype, "title", void 0);
